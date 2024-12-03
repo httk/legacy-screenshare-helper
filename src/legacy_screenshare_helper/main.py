@@ -73,7 +73,7 @@ def create_window(width, height):
 
     window = Gtk.Window()
     window.set_default_size(width, height)
-    window.set_title("Screensharing Window")
+    window.set_title("Legacy screenshare helper")
     window.connect("destroy", on_window_destroy)
 
     widget = Gtk.DrawingArea()
@@ -273,8 +273,8 @@ def play_pipewire_stream(node_id, stream_properties):
     xwindow = xdisplay.create_resource_object('window', window.get_window().get_xid())
 
     # Set window opacity
-    opacity_atom = xdisplay.intern_atom("_NET_WM_WINDOW_OPACITY", only_if_exists=False)
-    xwindow.change_property(opacity_atom, Xatom.CARDINAL, 32, [0])
+    #opacity_atom = xdisplay.intern_atom("_NET_WM_WINDOW_OPACITY", only_if_exists=False)
+    #xwindow.change_property(opacity_atom, Xatom.CARDINAL, 32, [0xffffffff//2])
 
     xdisplay.flush()
 
