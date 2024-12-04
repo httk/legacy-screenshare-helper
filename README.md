@@ -63,7 +63,7 @@ git pull
 
 ### Uninstall
 
-If you made it autostart xdg autostart feature, this is how you stop it:
+If you made it autostart using the xdg autostart feature, this is how you stop it:
 ```
 rm ~/.config/autostart/legacy-screenshare-helper.desktop
 ```
