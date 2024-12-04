@@ -14,51 +14,51 @@ The app is useful in the context of legacy communication software such as Zoom, 
 
 For Ubuntu 24.04, 24.10:
 ```
-  sudo apt install python3-gi python3-dbus python3-xlib gstreamer1.0-pipewire gir1.2-appindicator3-0.1
+sudo apt install python3-gi python3-dbus python3-xlib gstreamer1.0-pipewire gir1.2-appindicator3-0.1
 ```
 
 ### Install app
 Install from GitHub to a place where you want it, e.g.,:
 ```
-  git clone --depth 1 https://github.com/httk/legacy-screenshare-helper ~/Tools/legacy-screenshare-helper
-  cd ~/Tools/legacy-screenshare-helper
+git clone --depth 1 https://github.com/httk/legacy-screenshare-helper ~/Tools/legacy-screenshare-helper
+cd ~/Tools/legacy-screenshare-helper
 ```
 If you want to, install it into your desktop system:
 ```
-  mkdir -p ~/.local/share/icons/hicolor/256x256/apps
-  cp legacy-screenshare-helper.png ~/.local/share/icons/hicolor/256x256/apps/.
-  cp legacy-screenshare-helper.desktop ~/.local/share/applications/.
-  sed -i "s|^Exec=.*\$|Exec=\"$(pwd -P)/bin/legacy-screenshare-helper\" %U|" ~/.local/share/applications/legacy-screenshare-helper.desktop
-  gtk-update-icon-cache -f -t ~/.local/share/icons/hicolor
-  update-desktop-database ~/.local/share/applications
+mkdir -p ~/.local/share/icons/hicolor/256x256/apps
+cp legacy-screenshare-helper.png ~/.local/share/icons/hicolor/256x256/apps/.
+cp legacy-screenshare-helper.desktop ~/.local/share/applications/.
+sed -i "s|^Exec=.*\$|Exec=\"$(pwd -P)/bin/legacy-screenshare-helper\" %U|" ~/.local/share/applications/legacy-screenshare-helper.desktop
+gtk-update-icon-cache -f -t ~/.local/share/icons/hicolor
+update-desktop-database ~/.local/share/applications
 ```
 And if you want to, make it autostart when you log in:
 ```
-  cp legacy-screenshare-helper.service ~/.config/systemd/user
-  sed -i "s|^ExecStart=.*\$|ExecStart=\"$(pwd -P)/bin/legacy-screenshare-helper\" %U|" ~/.config/systemd/user/legacy-screenshare-helper.service
-  systemctl --user daemon-reload
-  systemctl --user enable legacy-screenshare-helper
-  systemctl --user start legacy-screenshare-helper
+cp legacy-screenshare-helper.service ~/.config/systemd/user
+sed -i "s|^ExecStart=.*\$|ExecStart=\"$(pwd -P)/bin/legacy-screenshare-helper\" %U|" ~/.config/systemd/user/legacy-screenshare-helper.service
+systemctl --user daemon-reload
+systemctl --user enable legacy-screenshare-helper
+systemctl --user start legacy-screenshare-helper
 ```
 
 ### Uninstall app
 
 If you made it autostart, this is how you disable that:
 ```
-  systemctl --user disable legacy-screenshare-helper
-  rm ~/.config/systemd/user/legacy-screenshare-helper.service
-  systemctl --user daemon-reload
+systemctl --user disable legacy-screenshare-helper
+rm ~/.config/systemd/user/legacy-screenshare-helper.service
+systemctl --user daemon-reload
 ```
 If you installed it into your desktop, this is how you remove it:
 ```
-  rm ~/.local/share/applications/legacy-screenshare-helper.desktop
-  rm ~/.local/share/icons/hicolor/256x256/apps/legacy-screenshare-helper.png
-  update-desktop-database ~/.local/share/applications
-  gtk-update-icon-cache -f -t ~/.local/share/icons/hicolor
+rm ~/.local/share/applications/legacy-screenshare-helper.desktop
+rm ~/.local/share/icons/hicolor/256x256/apps/legacy-screenshare-helper.png
+update-desktop-database ~/.local/share/applications
+gtk-update-icon-cache -f -t ~/.local/share/icons/hicolor
 ```
 After this you can just remove the folder in which you installed it, e.g.:
 ```
-  rm -rf ~/Tools/legacy-screenshare-helper
+rm -rf ~/Tools/legacy-screenshare-helper
 ```
 
 ## Usage
@@ -70,7 +70,7 @@ If you added it to your desktop, you can start it through selecting it among you
 
 You can of course also just run it manually:
 ```
-  ~/Tools/legacy-screenshare-helper/bin/httk-legacy-screenshare-helper
+~/Tools/legacy-screenshare-helper/bin/httk-legacy-screenshare-helper
 ```
 You should see a new icon added to the tray.
 
