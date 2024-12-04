@@ -1,0 +1,10 @@
+[Unit]
+Description=Legacy Screenshare Helper
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=legacy-screenshare-helper
+
+[Install]
+WantedBy=default.target

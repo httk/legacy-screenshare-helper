@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Legacy Screenshare Helper
+StartupWMClass=legacy-screenshare-helper
+Comment=Tray application for Wayland + xWayland to solve screenshare issues in Zoom, Discord, Teams, etc.
+Exec=
+Icon=legacy-screenshare-helper
+Type=Application
+Categories=Utility;Video;VideoConference;Presentation;
+Path=/usr/bin
