@@ -17,7 +17,7 @@ For Ubuntu 24.04, 24.10:
 sudo apt install python3-gi python3-dbus python3-xlib gstreamer1.0-pipewire gir1.2-appindicator3-0.1
 ```
 
-### Install app
+### Install
 Install from GitHub to a place where you want it, e.g.,:
 ```
 git clone --depth 1 https://github.com/httk/legacy-screenshare-helper ~/Tools/legacy-screenshare-helper
@@ -41,7 +41,16 @@ systemctl --user enable legacy-screenshare-helper
 systemctl --user start legacy-screenshare-helper
 ```
 
-### Uninstall app
+### Update
+
+If you have installed it according to the above instructions, then all that should be needed is to pull the latest changes from GitHub:
+```
+cd systemctl --user start legacy-screenshare-helper
+git pull --depth 1
+```
+(However: look under "Update" in the newer version to check if there are any additional instructions.)
+
+### Uninstall
 
 If you made it autostart, this is how you disable that:
 ```
