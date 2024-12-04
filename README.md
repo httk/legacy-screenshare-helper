@@ -17,6 +17,12 @@ For Ubuntu 24.04, 24.10:
 sudo apt install python3-gi python3-dbus python3-xlib python3-gst-1.0 gstreamer1.0-pipewire gir1.2-appindicator3-0.1
 ```
 
+**Your desktop environment must support application tray icons / appindicators**. 
+The default environment on Ubuntu, called "Unity" should support this by default.
+If you log into a normal Gnome environment, you may need to enable (or even first install) an extension for this.
+In Ubuntu, start the app "Extensions" and find the "Ubuntu AppIndicators" extension and make sure it is enabled.
+
+
 ### Install
 Install from GitHub to a place where you want it, e.g.,:
 ```
@@ -32,11 +38,12 @@ sed -i "s|^Exec=.*\$|Exec=\"$(pwd -P)/bin/legacy-screenshare-helper\" %U|" ~/.lo
 gtk-update-icon-cache -f -t ~/.local/share/icons/hicolor
 update-desktop-database ~/.local/share/applications
 ```
-And if you want to, make it autostart when you log in:
+And if you want to, make it autostart when you log in via the xdg autostart feature:
 ```
 ln -s ~/.local/share/applications/legacy-screenshare-helper.desktop ~/.config/autostart/.
 ```
-**Alternative way to autostart using systemd user service** (only do either the command above, or the below, not both)
+
+**Alternative way** to autostart it via a systemd user service (only do either the command above, or this; not both)
 ```
 cp legacy-screenshare-helper.service ~/.config/systemd/user
 sed -i "s|^ExecStart=.*\$|ExecStart=\"$(pwd -P)/bin/legacy-screenshare-helper\" %U|" ~/.config/systemd/user/legacy-screenshare-helper.service
@@ -56,20 +63,27 @@ git pull
 
 ### Uninstall
 
-If you made it autostart, this is how you disable that:
+If you made it autostart xdg autostart feature, this is how you stop it:
+```
+rm ~/.config/autostart/legacy-screenshare-helper.desktop
+```
+
+If you made it autostart using a systemd user service, this is how you disable it:
 ```
 systemctl --user disable legacy-screenshare-helper
 rm ~/.config/systemd/user/legacy-screenshare-helper.service
 systemctl --user daemon-reload
 ```
-If you installed it into your desktop environment, this is how you remove it:
+
+If you installed legacy-screenshare-helper into your desktop environment, this is how you remove it:
 ```
 rm ~/.local/share/applications/legacy-screenshare-helper.desktop
 rm ~/.local/share/icons/hicolor/256x256/apps/legacy-screenshare-helper.png
 update-desktop-database ~/.local/share/applications
 gtk-update-icon-cache -f -t ~/.local/share/icons/hicolor
 ```
-After this you can just remove the folder in which you installed it, e.g.:
+
+If you want to remove all traces of it, you can then just remove the folder in which you installed it, e.g.:
 ```
 rm -rf ~/Tools/legacy-screenshare-helper
 ```
@@ -77,15 +91,15 @@ rm -rf ~/Tools/legacy-screenshare-helper
 ## Usage
 
 ### Manually start app
-If you made it autostart, it should already be running in your tray.
 
-If you added it to your desktop, you can start it through selecting it among your other apps.
+* If you made it autostart, it should already be running in your tray.
+* If you added it to your desktop, you can start it through selecting it among your other apps.
+* You can of course also just run it manually:
+  ```
+  ~/Tools/legacy-screenshare-helper/bin/httk-legacy-screenshare-helper
+  ```
 
-You can of course also just run it manually:
-```
-~/Tools/legacy-screenshare-helper/bin/httk-legacy-screenshare-helper
-```
-You should see a new icon added to the tray.
+When it is running, you should see its icon in the tray.
 
 ### Usage
 
