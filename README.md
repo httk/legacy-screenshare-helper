@@ -103,9 +103,11 @@ When it is running, you should see its icon in the tray.
 
 ### Usage
 
-Run your legacy communication software in x11 mode (on xWayland running on top of Wayland). Realize that you need to share your screen via the software.
+Run your legacy communication software in x11 mode (on xWayland running on top of Wayland). 
 
-Click on the tray icon and select 'Start screenshare'.
-Start the functionality to share screen in the software.
-Find the window named "Legacy screenshare helper" and share that window.
-Once you are done, click the tray icon and select 'Stop screenshare'.
+When you need to share your screen via the software:
+
+1. Click on the tray icon and select 'Start screenshare'.
+2. Start the functionality to share screen in your communication software.
+3. Select to share the window titled "Legacy screenshare helper".
+4. Once you are done with sharing your screen, click the tray icon and select 'Stop screenshare'.
