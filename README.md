@@ -14,7 +14,7 @@ The app is useful in the context of legacy communication software such as Zoom, 
 
 For Ubuntu 24.04, 24.10:
 ```
-sudo apt install python3-gi python3-dbus python3-xlib gstreamer1.0-pipewire gir1.2-appindicator3-0.1
+sudo apt install python3-gi python3-dbus python3-xlib python3-gst-1.0 gstreamer1.0-pipewire gir1.2-appindicator3-0.1
 ```
 
 ### Install
