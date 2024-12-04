@@ -34,6 +34,10 @@ update-desktop-database ~/.local/share/applications
 ```
 And if you want to, make it autostart when you log in:
 ```
+ln -s ~/.local/share/applications/legacy-screenshare-helper.desktop ~/.config/autostart/.
+```
+**Alternative way to autostart using systemd user service** (only do either the command above, or the below, not both)
+```
 cp legacy-screenshare-helper.service ~/.config/systemd/user
 sed -i "s|^ExecStart=.*\$|ExecStart=\"$(pwd -P)/bin/legacy-screenshare-helper\" %U|" ~/.config/systemd/user/legacy-screenshare-helper.service
 systemctl --user daemon-reload
