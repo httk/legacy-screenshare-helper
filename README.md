@@ -20,7 +20,7 @@ sudo apt install python3-gi python3-dbus python3-xlib python3-gst-1.0 gstreamer1
 ### Install
 Install from GitHub to a place where you want it, e.g.,:
 ```
-git clone --depth 1 https://github.com/httk/legacy-screenshare-helper ~/Tools/legacy-screenshare-helper
+git clone https://github.com/httk/legacy-screenshare-helper ~/Tools/legacy-screenshare-helper
 cd ~/Tools/legacy-screenshare-helper
 ```
 If you want to, install it into your desktop environment:
@@ -46,7 +46,7 @@ systemctl --user start legacy-screenshare-helper
 If you have installed it according to the above instructions, then all that should be needed is to pull the latest changes from GitHub:
 ```
 cd systemctl --user start legacy-screenshare-helper
-git pull --depth 1
+git pull
 ```
 (However: look under "Update" in the newer version to check if there are any additional instructions.)
 
