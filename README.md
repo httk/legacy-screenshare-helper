@@ -23,7 +23,7 @@ Install from GitHub to a place where you want it, e.g.,:
 git clone --depth 1 https://github.com/httk/legacy-screenshare-helper ~/Tools/legacy-screenshare-helper
 cd ~/Tools/legacy-screenshare-helper
 ```
-If you want to, install it into your desktop system:
+If you want to, install it into your desktop environment:
 ```
 mkdir -p ~/.local/share/icons/hicolor/256x256/apps
 cp legacy-screenshare-helper.png ~/.local/share/icons/hicolor/256x256/apps/.
@@ -49,7 +49,7 @@ systemctl --user disable legacy-screenshare-helper
 rm ~/.config/systemd/user/legacy-screenshare-helper.service
 systemctl --user daemon-reload
 ```
-If you installed it into your desktop, this is how you remove it:
+If you installed it into your desktop environment, this is how you remove it:
 ```
 rm ~/.local/share/applications/legacy-screenshare-helper.desktop
 rm ~/.local/share/icons/hicolor/256x256/apps/legacy-screenshare-helper.png
