@@ -75,7 +75,7 @@ rm ~/.config/systemd/user/legacy-screenshare-helper.service
 systemctl --user daemon-reload
 ```
 
-If you installed legacy-screenshare-helper into your desktop environment, this is how you remove it:
+If you installed legacy-screenshare-helper into your desktop environment, this is how you undo this:
 ```
 rm ~/.local/share/applications/legacy-screenshare-helper.desktop
 rm ~/.local/share/icons/hicolor/256x256/apps/legacy-screenshare-helper.png
