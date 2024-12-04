@@ -101,7 +101,7 @@ rm -rf ~/Tools/legacy-screenshare-helper
 
 When it is running, you should see its icon in the tray.
 
-### Usage
+### Steps to use
 
 Run your legacy communication software in x11 mode (on xWayland running on top of Wayland). 
 
