@@ -56,7 +56,7 @@ systemctl --user start legacy-screenshare-helper
 
 If you have installed it according to the above instructions, then all that should be needed is to pull the latest changes from GitHub:
 ```
-cd systemctl --user start legacy-screenshare-helper
+cd ~/Tools/legacy-screenshare-helper
 git pull
 ```
 (However: look under "Update" in the newer version to check if there are any additional instructions.)
