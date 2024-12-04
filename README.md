@@ -90,7 +90,7 @@ rm -rf ~/Tools/legacy-screenshare-helper
 
 ## Usage
 
-### Manually start app
+### Start the app
 
 * If you made it autostart, it should already be running in your tray.
 * If you added it to your desktop, you can start it through selecting it among your other apps.
