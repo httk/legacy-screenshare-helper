@@ -40,6 +40,7 @@ update-desktop-database ~/.local/share/applications
 ```
 And if you want to, make it autostart when you log in via the xdg autostart feature:
 ```
+mkdir -p ~/.config/autostart
 ln -s ~/.local/share/applications/legacy-screenshare-helper.desktop ~/.config/autostart/.
 ```
 
