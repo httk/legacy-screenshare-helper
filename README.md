@@ -93,11 +93,11 @@ rm -rf ~/Tools/legacy-screenshare-helper
 
 ### Start the app
 
-* If you made it autostart, it should already be running in your tray.
+* If you made it autostart and have logged out and in again, it should already be running in your tray.
 * If you added it to your desktop, you can start it through selecting it among your other apps.
 * You can of course also just run it manually:
   ```
-  ~/Tools/legacy-screenshare-helper/bin/httk-legacy-screenshare-helper
+  ~/Tools/legacy-screenshare-helper/bin/legacy-screenshare-helper
   ```
 
 When it is running, you should see its icon in the tray.
